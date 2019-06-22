@@ -2,11 +2,12 @@
 Auto form validation and centralized ajax request
 
 
-```const form = new terebra('#form-id', '.input-class', '.input-ignore', '#submit-btn-id');
-				 form.fn_focus();
-				 form.fn_oninput();
-				 form.fn_click(function(e)
-				 {
+	 ```
+	 const form = new terebra('#form-id', '.input-class', '.input-ignore', '#submit-btn-id');
+	 form.fn_focus();
+	 form.fn_oninput();
+	 form.fn_click(function(e)
+	 {
               form.active = function()
               {
                   //Callback function when request is active
@@ -32,4 +33,4 @@ Auto form validation and centralized ajax request
                   form.settings["data"] = validated_data;
                   form.fn_request();
               }
-				 });
+	});
