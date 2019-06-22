@@ -1,8 +1,6 @@
 # terebra
 Auto form validation and centralized ajax request
 
-
-	 ```
 	 const form = new terebra('#form-id', '.input-class', '.input-ignore', '#submit-btn-id');
 	 form.fn_focus();
 	 form.fn_oninput();
@@ -29,7 +27,7 @@ Auto form validation and centralized ajax request
               let validated_data = form.fn_validate();
               if( validated_data )
               {
-                  form.settings["url"] = site_url+"account/"+action+"/";
+                  form.settings["url"] = "http://www.fake.url/account/insert";
                   form.settings["data"] = validated_data;
                   form.fn_request();
               }
