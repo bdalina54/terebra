@@ -1,0 +1,10 @@
+    Usage:
+    terebra.init('#form-id', '.input-class', '#submit-id');
+    terebra.click( function()
+    {
+        if(terebra.validate())
+        {
+            terebra.settings['url']='https://webtag.ml/sample.php';
+            terebra.request();
+        }
+    });
