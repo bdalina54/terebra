@@ -10,7 +10,7 @@
                 let invalid_id = str.match(/[^#a-z0-9-_]/gmi); // a valid id #a-zA-Z-0-9-_
                 if(!invalid_id)
                 {
-                    return document.getElementById( str.replace(/#/gm,'') );
+                    return d.getElementById( str.replace(/#/gm,'') );
                 }
                 else
                 {
@@ -26,17 +26,17 @@
                 }
                 else
                 {
-                    return document.getElementsByClassName( str.replace(/\./gm,'') );
+                    return d.getElementsByClassName( str.replace(/\./gm,'') );
                 }
             };
-            terebra.qr = (str) => { return document.querySelector(str); };
-            terebra.qa = (str) => { return document.querySelectorAll(str); };
+            terebra.qr = (str) => { return d.querySelector(str); };
+            terebra.qa = (str) => { return d.querySelectorAll(str); };
             terebra.ta = (str) =>
             {
                 let invalid_tag = str.match(/[^a-z]/gmi); // a valid tag a-zA-Z
                 if(!invalid_tag)
                 {
-                    return document.getElementsByTagName(str);
+                    return d.getElementsByTagName(str);
                 }
                 else
                 {
@@ -63,7 +63,7 @@
 
             terebra.ready = function ready(callback=null)
             {
-                window.onload = function()
+                w.onload = function()
                 {
                     return ( callback ) ? callback() : void(0) ;
                 }
